@@ -1,0 +1,55 @@
+/* ── Selection Overlay ───────────────────────────────────────────────────── */
+#ocr-overlay {
+  position: fixed;
+  inset: 0;               /* shorthand for top/right/bottom/left: 0 */
+  width: 100vw;
+  height: 100vh;
+  z-index: 2147483647;    /* max z-index */
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ── Drag selection box ──────────────────────────────────────────────────── */
+#ocr-selection {
+  position: fixed;
+  display: none;
+  border: 2px solid #4fc3f7;
+  background: rgba(79, 195, 247, 0.10);
+  box-shadow: 0 0 0 1px rgba(79, 195, 247, 0.3);
+  border-radius: 2px;
+  pointer-events: none;   /* don't intercept mouse events */
+  box-sizing: border-box;
+}
+
+/* ── Toast notification ──────────────────────────────────────────────────── */
+#ocr-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  background: #0d1117;
+  color: #4fc3f7;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(79, 195, 247, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: ocr-slide-up 0.2s ease;
+}
+
+@keyframes ocr-slide-up {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

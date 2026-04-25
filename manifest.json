@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "ImgToText — Screen OCR",
+  "version": "1.2.2",
+  "description": "Select any region on screen and instantly copy text from it.",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "offscreen"
+  ],
+  "host_permissions": ["<all_urls>"],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "ImgToText: Select a region to copy text"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "offscreen.html",
+        "lib/tesseract.min.js",
+        "lib/worker.min.js",
+        "lib/tesseract-core.wasm.js",
+        "lib/tesseract-core-simd.wasm.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

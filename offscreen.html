@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OCR Offscreen</title>
+</head>
+<body>
+  <!--
+    This document exists solely to provide a DOM context for:
+      1. <canvas> — used to crop the screenshot
+      2. Tesseract.js — requires DOM APIs (Web Workers, WASM, etc.)
+    It is never visible to the user.
+  -->
+  <canvas id="crop-canvas"></canvas>
+
+  <script src="lib/tesseract.min.js"></script>
+  <script src="ocr.js"></script>
+</body>
+</html>
