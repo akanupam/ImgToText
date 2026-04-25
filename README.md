@@ -4,6 +4,8 @@ A production-ready, minimal Chrome Extension (Manifest V3) that allows you to se
 <p align="center">
   <img src="icons/icon128.png" alt="Extension icon" width="200"/>
 </p>
+
+
 ## Features
 - **Region Selection**: Click and drag to select any part of the active webpage.
 - **Instant OCR**: Extract text from images, headers, or any non-selectable elements.
