@@ -18,7 +18,7 @@ A production-ready, minimal Chrome Extension (Manifest V3) that allows you to se
 The easiest way to use this extension is to download the pre-packaged version from the **Releases** page.
 
 ### 1. Download & Extract
-- Go to the [Releases](https://github.com/YOUR_USERNAME/YOUR_REPO/releases) page.
+- Go to the [Releases](https://github.com/akanupam/ImgToText/releases) page.
 - Download the `imgtotext_v1.2.2.zip` file.
 - Extract the ZIP to a folder on your computer (e.g., `Documents/imgtotext`).
 
